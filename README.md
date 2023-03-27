@@ -1,31 +1,50 @@
-# unsupervised-machine-learning-challenge
+# Myopia Clustering Analysis
 
+This project aims to analyze the myopia patient data using unsupervised machine learning techniques, such as PCA and clustering algorithms, to identify potential clusters of patients that share similar characteristics.
 
-#### Part 1: Prepare the Data
+## Requirements
 
-1. Read `myopia.csv` into a Pandas DataFrame.
-   * **Note:** This file can be found in your Module 20 Challenge files.
-2. Remove the "MYOPIC" column from the dataset.
-   * **Note:** The target column is needed for supervised machine learning, but it will make an unsupervised model biased. After all, the target column is effectively providing clusters already!
-3. Standardize your dataset so that columns that contain larger values do not influence the outcome more than columns with smaller values.
+To run this code, you will need the following Python libraries:
 
-#### Part 2: Apply Dimensionality Reduction
+* pandas
+* pathlib
+* scikit-learn
+* matplotlib
+* plotly
+* numpy
+* hvplot
 
-1. Perform dimensionality reduction with PCA. How did the number of the features change?
-2. Further reduce the dataset dimensions with t-SNE and visually inspect the results. To do this, run t-SNE on the principal components, which is the output of the PCA transformation.
-3. Create a scatter plot of the t-SNE output. Are there distinct clusters?
+## Usage
 
-   ![1676687423493](image/README/1676687423493.png)
+1. Download the `myopia.csv` dataset and place it in the `Resources` folder.
+2. Run the provided code in  to perform data preprocessing, dimensionality reduction, and clustering analysis.
 
-   ![1676687464425](image/README/1676687464425.png)
+## Overview
 
-#### Part 3: Perform a Cluster Analysis with K-means
+The code is structured in three parts:
 
-Create an elbow plot to identify the best number of clusters. Make sure to do the following:
+### Part 1: Prepare the Data
 
-* Use a `for` loop to determine the inertia for each `k` between 1 through 10.
-* If possible, determine where the elbow of the plot is, and at which value of `k` it appears.
+* Reads the dataset and removes the "MYOPIC" column.
+* Standardizes the dataset so that all features have the same scale.
 
-#### Part 4: Make a Recommendation
+### Part 2: Apply Dimensionality Reduction
 
-Based on your findings, write up a brief (one or two sentences) recommendation for your supervisor in your Jupyter Notebook. Can the patients be clustered? If so, into how many clusters?
+Applies PCA to reduce the dimensionality of the dataset, while preserving 90% of the explained variance.
+
+Transforms the dataset using t-SNE for better visualization.
+
+![1676687423493](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/erdos/OneDrive/Documents/GitHub/myopia-unsupervised-ML/image/README/1676687423493.png)
+
+### Part 3: Perform a Cluster Analysis with K-means
+
+* Calculates the optimal number of clusters using the elbow method and silhouette scores.
+* Performs K-means clustering with the optimal number of clusters.
+* Visualizes the resulting clusters in 2D and 3D plots.
+  ![1676687464425](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/erdos/OneDrive/Documents/GitHub/myopia-unsupervised-ML/image/README/1676687464425.png)
+
+  ![1679926314459](image/README/1679926314459.png)
+
+## Conclusion
+
+Based on the fine-tuned t-SNE model and the silhouette score analysis conducted on the elbow_data, it is recommended to group the patients into 5 clusters.
