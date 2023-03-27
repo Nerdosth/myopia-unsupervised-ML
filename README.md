@@ -34,11 +34,13 @@ Applies PCA to reduce the dimensionality of the dataset, while preserving 90% of
 
 Transforms the dataset using t-SNE for better visualization.
 
-![1676687423493](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/erdos/OneDrive/Documents/GitHub/myopia-unsupervised-ML/image/README/1676687423493.png)
+    ![1679926526421](image/README/1679926526421.png)
 
 ### Part 3: Perform a Cluster Analysis with K-means
 
 * Calculates the optimal number of clusters using the elbow method and silhouette scores.
+
+  ![1679926544224](image/README/1679926544224.png)
 * Performs K-means clustering with the optimal number of clusters.
 * Visualizes the resulting clusters in 2D and 3D plots.
   ![1676687464425](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/erdos/OneDrive/Documents/GitHub/myopia-unsupervised-ML/image/README/1676687464425.png)
