@@ -48,4 +48,4 @@ Transforms the dataset using t-SNE for better visualization.
 
 ## Conclusion
 
-Based on the fine-tuned t-SNE model and the silhouette score analysis conducted on the elbow_data, it is recommended to group the patients into 5 clusters.
+Based on the fine-tuned t-SNE model and the silhouette score analysis conducted, it is recommended to group the patients into 5 clusters.
